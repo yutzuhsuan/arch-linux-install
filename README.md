@@ -19,8 +19,8 @@ mount /dev/sdaX /mnt
 ```bash
 mount /dev/sdaX /mnt/boot
 ```
-<aside class="warning">
-如果 windows 快速關機沒取消 boot 會 mount 失敗, 就要先 ntfsfix
+<aside class="notice">
+如果 windows 快速關機沒取消 /mnt/boot 會 mount 失敗, 就要先 ntfsfix
 </aside>
 ```bash
 ntfsfix /dev/sdaX
