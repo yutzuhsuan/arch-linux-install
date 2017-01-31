@@ -1,5 +1,6 @@
 # arch-linux-install
 My Arch linux install guide
+special thanks [@geniusgordon](https://github.com/geniusgordon) [@afg984](https://github.com/afg984)
 
 ## Disk
 ```bash
@@ -92,6 +93,17 @@ pacman -U packer-20160325-1-any.pkg.tar.xz # 版本可能會長不一樣
 ```
 裝完記得把安裝資料夾移除
 
+## Fonts
+```
+packer noto
+```
+安裝以下幾個
+* noto-fonts
+* noto-fonts-cjk
+* noto-fonts-emoji
+
+要記得去 google-chrome 設定 noto-fonts-cjk 才能顯示中文
+
 ## 設定
 ```bash
 pacman -S openssh
@@ -112,10 +124,10 @@ pacman -S openssh
 
 ## Tools
 * albert
-* arc-gtk-theme
 * gnome-tweak-tool
+* arc-gtk-theme ( 記得去 tweak-tool 裡面打開 )
 * networkmanager
-* paper-icon-theme-git
+* paper-icon-theme-git ( 記得去 tweak-tool 裡面打開 )
 * tmux
 * wget
 * vim
