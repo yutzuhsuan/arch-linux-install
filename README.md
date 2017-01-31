@@ -69,6 +69,9 @@ systemctl enable gdm
 
 ## Boot
 ```bash
+pacman -S os-prober
+```
+```bash
 mkinitcpio -p linux
 ```
 ```bash
