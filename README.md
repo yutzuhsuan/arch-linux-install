@@ -139,6 +139,7 @@ pacman -S openssh
 * wget
 * vim
 * dash-to-dock ( enable it in tweak-tool )
+* xfce4-terminal ( background opacity is soooo great )
 
 ## Yarn
 * yarn
