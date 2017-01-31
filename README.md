@@ -70,7 +70,7 @@ systemctl enable gdm
 
 ## Boot
 ```bash
-pacman -S os-prober
+pacman -S os-prober # 要裝這個才抓的到 windows
 ```
 ```bash
 mkinitcpio -p linux
