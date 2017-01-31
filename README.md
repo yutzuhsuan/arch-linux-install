@@ -10,7 +10,7 @@ My device is thinkpad T450 with windows 10 pro and arch linux
 fdisk /dev/sda
 ```
 ```bash
-mkswap /dev/sdaX  # 我都不做 swap 了
+mkswap /dev/sdaX  # I don't need swap
 ```
 ```bash
 mkfs -t ext4 /dev/sdaX
@@ -24,14 +24,13 @@ mount /dev/sdaX /mnt
 mount /dev/sdaX /mnt/boot
 ```
 
-
-如果 windows 快速關機沒取消 /mnt/boot 會 mount 失敗, 就要先 ntfsfix
+if your mount fail due to the windows fast startup
 ```bash
 ntfsfix /dev/sdaX
 ```
 ## Install
 ```bash
-wifi-menu # 先連網, arch 的安裝需要下載
+wifi-menu # connect to wifi, your install needs to download lots of things
 ```
 ```bash
 pacstrap /mnt base base-devel
@@ -42,19 +41,19 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 ## Settings
 ```bash
-arch-chroot /mnt # 從隨身碟進入我們剛灌好的 arch 裡面
+arch-chroot /mnt # now we are in our new arch linux
 ```
 ```bash
-echo hostname > /etc/hostname # 自己設定 hostname
+echo hostname > /etc/hostname # name your own hostname
 ```
 ```bash
-ln -s /usr/share/zoneinfo/Asia/Taipei /etc/localtime # 如果已經存在 localtime 這個檔案的話就把已經存在的 localtime 改成 localtime.backup
+ln -s /usr/share/zoneinfo/Asia/Taipei /etc/localtime # if the localtime is already exist mv it to localtime.backup
 ```
 ```bash
 vim /etc/locale.gen # "zh_TW BIG5" "zh_TW.UTF-8 UTF-8" "zh_CN.UTF-8 UTF-8" "en_US.UTF-8 UTF-8" "en_US ISO-8859-1" "chr_US UTF-8"
 ```
 ```bash
-vim /etc/locale.conf # 創造 conf 並寫入這行 LANG="en_US.UTF-8"
+vim /etc/locale.conf # create a file and paste LANG="en_US.UTF-8"
 ```
 ```bash
 locale-gen
@@ -73,8 +72,9 @@ systemctl enable gdm
 
 ## Boot
 ```bash
-pacman -S os-prober # 要裝這個才抓的到 windows
+pacman -S os-prober # to find your windows
 ```
+I can't find my windows at the first time, but after reboot os-prober successfully find my windows
 ```bash
 mkinitcpio -p linux
 ```
@@ -91,28 +91,28 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ## Aur
 ```bash
 git clone https://aur.archlinux.org/packer.git
-makepkg # 他會提示兩個缺的東西, 用 pacman 把那兩個裝起來
-pacman -U packer-20160325-1-any.pkg.tar.xz # 版本可能會長不一樣
+makepkg # install two missing dependencies
+pacman -U packer-20160325-1-any.pkg.tar.xz # the version might not be the same
 ```
-裝完記得把安裝資料夾移除
+remember to remove the install directory after successfully install packer
 
 ## Fonts
 ```
 packer noto
 ```
-安裝以下幾個
+i use traditional chinese
 * noto-fonts
 * noto-fonts-cjk
 * noto-fonts-emoji
 
-要記得去 google-chrome 設定 noto-fonts-cjk 才能顯示中文
+remember to set your google-chrome font's to cjk
 
-## 設定
+## Config
 ```bash
 pacman -S openssh
 ```
 * install vundle
-* 把 .ssh 從 google drive 拉下來
+* clone my .ssh directory from google-drive
 * dotfiles from github ( .vimrc )
 
 
@@ -128,12 +128,13 @@ pacman -S openssh
 ## Tools
 * albert
 * gnome-tweak-tool
-* arc-gtk-theme ( 記得去 tweak-tool 裡面打開 )
+* arc-gtk-theme ( enable it in tweak-tool )
 * networkmanager
-* paper-icon-theme-git ( 記得去 tweak-tool 裡面打開 )
+* paper-icon-theme-git ( enable it in tweak-tool )
 * tmux
 * wget
 * vim
+* dash-to-dock ( enable it in tweak-tool )
 
 ## Yarn
 * yarn
