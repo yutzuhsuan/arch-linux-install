@@ -5,6 +5,8 @@ My device is thinkpad T450 with windows 10 pro and arch linux
 
 special thanks [@geniusgordon](https://github.com/geniusgordon) [@afg984](https://github.com/afg984)
 
+[@geniusgordon's note](http://simp.ly/p/pzgqzL)
+
 2017/01/31
 
 ## Disk
