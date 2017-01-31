@@ -2,8 +2,7 @@
 My Arch linux install guide
 special thanks [@geniusgordon](https://github.com/geniusgordon) [@afg984](https://github.com/afg984)
 
-2017 / 01 / 31
-My device is thinkpad T450 with windows 10 pro and arch linux
+My device is thinkpad T450 with windows 10 pro and arch linux 2017 / 01 / 31
 
 ## Disk
 ```bash
