@@ -1,8 +1,11 @@
 # arch-linux-install
 My Arch linux install guide
+
+My device is thinkpad T450 with windows 10 pro and arch linux
+
 special thanks [@geniusgordon](https://github.com/geniusgordon) [@afg984](https://github.com/afg984)
 
-My device is thinkpad T450 with windows 10 pro and arch linux 2017/01/31
+2017/01/31
 
 ## Disk
 ```bash
