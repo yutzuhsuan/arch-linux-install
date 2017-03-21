@@ -142,6 +142,7 @@ pacman -S openssh
 * xfce4-terminal ( background opacity is soooo great )
 * hub
 * caprine
+* gitmoji
 
 ## Yarn
 * yarn
