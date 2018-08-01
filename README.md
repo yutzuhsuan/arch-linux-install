@@ -161,3 +161,6 @@ pacman -S openssh
 * android-sdk-platform-tools
 * genymotion
 
+## Terminal
+* Xfce Terminal
+* [base16-theme](https://github.com/afg984/base16-xfce4-terminal)
