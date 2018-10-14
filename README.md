@@ -164,3 +164,7 @@ pacman -S openssh
 ## Terminal
 * Xfce Terminal
 * [base16-theme](https://github.com/afg984/base16-xfce4-terminal)
+
+## Packer package
+* vundle-git 0.10.2.627.9a38216-1
+
